@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import * as pdfjsLib from "pdfjs-dist";
+import { useState } from "react";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 import { FileUp, File as FileIcon, Trash2, ArrowLeft, Loader2, Download, FileText } from "lucide-react";
 import Link from "next/link";
@@ -11,11 +10,6 @@ export default function PdfToWordPage() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [wordFile, setWordFile] = useState<{ url: string; name: string } | null>(null);
-
-  useEffect(() => {
-    // Configure PDF.js worker
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
-  }, []);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -43,6 +37,9 @@ export default function PdfToWordPage() {
     setProgress(10);
     
     try {
+      const pdfjsLib = await import("pdfjs-dist");
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+
       const arrayBuffer = await file.arrayBuffer();
       setProgress(20);
       
