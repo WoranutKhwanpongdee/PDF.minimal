@@ -24,14 +24,15 @@ A modern, fast, and secure local-first PDF manipulation tool built with Next.js 
 - **Framework:** [Next.js 14](https://nextjs.org/) (App Router, React)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
-- **PDF Manipulation:** [`pdf-lib`](https://pdf-lib.js.org/) (Runs entirely in the browser)
+- **PDF Manipulation:** `pdf-lib` and `pdfjs-dist` (Runs entirely in the browser)
+- **Document Generation:** `docx`
 - **State Management:** LocalStorage (via custom store)
 
 ## 📦 Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
+- Node.js (v22.13.0 or higher required)
 - npm, yarn, or pnpm
 
 ### Installation
@@ -61,6 +62,15 @@ A modern, fast, and secure local-first PDF manipulation tool built with Next.js 
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## ☁️ Deployment
+
+The easiest way to deploy your Next.js app is to use the Vercel Platform.
+
+1. Push your code to a Git repository (GitHub, GitLab, or BitBucket).
+2. Import the project into Vercel.
+3. Ensure the **Node.js Version** in Vercel settings (Settings > General) is set to `22.x`.
+4. Click **Deploy**.
 
 ## 🔒 Privacy & Security
 
