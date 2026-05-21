@@ -16,8 +16,8 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-[260px] border-r border-zinc-200/60 bg-[#FAFAFA]/80 backdrop-blur-xl">
-      <div className="mb-4 mt-2 flex h-16 items-center px-6">
+    <aside className="relative w-full border-b border-zinc-200/60 bg-[#FAFAFA]/95 backdrop-blur-xl md:fixed md:left-0 md:top-0 md:h-screen md:w-[260px] md:border-b-0 md:border-r md:bg-[#FAFAFA]/80">
+      <div className="mb-3 flex h-auto items-center px-4 py-4 md:mb-4 md:mt-2 md:h-16 md:px-6 md:py-0">
         <div className="flex items-center gap-3">
           <Image
             src="/logo.pdf.png"
@@ -33,7 +33,7 @@ export function Sidebar() {
         </div>
       </div>
 
-      <nav className="flex flex-col gap-1.5 px-4">
+      <nav className="flex flex-wrap gap-2 px-4 pb-4 md:flex-col md:gap-1.5 md:pb-0">
         {navItems.map((item) => {
           const isActive = pathname === item.href
           return (
@@ -41,7 +41,7 @@ export function Sidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
+                "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 whitespace-nowrap md:w-auto",
                 isActive
                   ? "bg-white text-zinc-900 shadow-sm ring-1 ring-zinc-200/50"
                   : "text-zinc-500 hover:bg-zinc-100/80 hover:text-zinc-900"

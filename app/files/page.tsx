@@ -34,9 +34,9 @@ export default function FilesPage() {
 
       <Sidebar />
 
-      <main className="relative z-10 ml-[260px] min-h-screen px-5 py-6 lg:px-8 lg:py-7">
+      <main className="relative z-10 min-h-screen px-4 py-5 md:ml-[260px] md:px-5 md:py-6 lg:px-8 lg:py-7">
         <div className="mx-auto max-w-5xl">
-          <header className="mb-7 flex flex-col items-start gap-3">
+          <header className="mb-6 flex flex-col items-start gap-3 sm:mb-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/60 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-600 shadow-sm backdrop-blur-md">
               <FolderOpen className="h-3 w-3" />
               Activity Log
@@ -44,7 +44,7 @@ export default function FilesPage() {
 
             <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
-                <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
+                <h1 className="text-[1.75rem] font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
                   My Files
                 </h1>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-zinc-500 sm:text-base">
@@ -54,9 +54,9 @@ export default function FilesPage() {
             </div>
           </header>
 
-          <div className="rounded-[20px] border border-zinc-200/60 bg-white/80 overflow-hidden shadow-sm backdrop-blur-xl">
+          <div className="overflow-hidden rounded-[20px] border border-zinc-200/60 bg-white/80 shadow-sm backdrop-blur-xl">
             {history.length === 0 ? (
-              <div className="flex flex-col items-center justify-center p-16 text-center">
+              <div className="flex flex-col items-center justify-center p-10 text-center sm:p-16">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-[14px] bg-zinc-100/80 text-zinc-400 ring-1 ring-zinc-200/50">
                   <Clock className="w-7 h-7" />
                 </div>
@@ -65,9 +65,9 @@ export default function FilesPage() {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
+                  <table className="w-full border-collapse text-left">
                   <thead>
-                    <tr className="border-b border-zinc-200/60 bg-zinc-50/50 text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
+                    <tr className="border-b border-zinc-200/60 bg-zinc-50/50 text-[11px] font-medium uppercase tracking-wide text-zinc-500">
                       <th className="px-5 py-3.5">Action</th>
                       <th className="px-5 py-3.5">Filename</th>
                       <th className="px-5 py-3.5">Date</th>

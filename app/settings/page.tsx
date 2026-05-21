@@ -44,9 +44,9 @@ export default function SettingsPage() {
 
       <Sidebar />
 
-      <main className="relative z-10 ml-[260px] min-h-screen px-5 py-6 lg:px-8 lg:py-7">
+      <main className="relative z-10 min-h-screen px-4 py-5 md:ml-[260px] md:px-5 md:py-6 lg:px-8 lg:py-7">
         <div className="mx-auto max-w-5xl">
-          <header className="mb-7 flex flex-col items-start gap-3">
+          <header className="mb-6 flex flex-col items-start gap-3 sm:mb-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/60 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-600 shadow-sm backdrop-blur-md">
               <SettingsIcon className="h-3 w-3" />
               Application Preferences
@@ -54,7 +54,7 @@ export default function SettingsPage() {
 
             <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
-                <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
+                <h1 className="text-[1.75rem] font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
                   Settings
                 </h1>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-zinc-500 sm:text-base">

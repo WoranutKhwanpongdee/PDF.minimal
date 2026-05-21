@@ -81,9 +81,9 @@ export default function Home() {
 
       <Sidebar />
 
-      <main className="relative z-10 ml-[260px] min-h-screen px-5 py-6 lg:px-8 lg:py-7">
+      <main className="relative z-10 min-h-screen px-4 py-5 md:ml-[260px] md:px-5 md:py-6 lg:px-8 lg:py-7">
         <div className="mx-auto max-w-5xl">
-          <header className="mb-7 flex flex-col items-start gap-3">
+          <header className="mb-6 flex flex-col items-start gap-3 sm:mb-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/60 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-600 shadow-sm backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-zinc-900 opacity-75"></span>
@@ -94,7 +94,7 @@ export default function Home() {
 
             <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
-                <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
+                <h1 className="text-[1.75rem] font-semibold tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
                   All Tools
                 </h1>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-zinc-500 sm:text-base">
@@ -102,16 +102,16 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex shrink-0 items-center gap-2.5 text-center text-sm text-zinc-500">
-                <div className="flex min-w-[74px] flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md">
+              <div className="flex w-full flex-wrap items-center gap-2.5 text-center text-sm text-zinc-500 md:w-auto md:justify-end md:flex-nowrap">
+                <div className="flex min-w-[74px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md md:flex-none">
                   <span className="text-lg font-semibold text-zinc-900">9</span>
                   <span className="text-xs font-medium">Tools</span>
                 </div>
-                <div className="flex min-w-[74px] flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md">
+                <div className="flex min-w-[74px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md md:flex-none">
                   <span className="text-lg font-semibold text-zinc-900">0</span>
                   <span className="text-xs font-medium">Uploads</span>
                 </div>
-                <div className="flex min-w-[74px] flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md">
+                <div className="flex min-w-[74px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200/60 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md md:flex-none">
                   <span className="text-lg font-semibold text-zinc-900">100%</span>
                   <span className="text-xs font-medium">Local</span>
                 </div>
